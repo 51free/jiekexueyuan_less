@@ -1,0 +1,156 @@
+//system LESS
+@color: #E4E4E4;
+//全职设置
+#border {
+    border-bottom: 1px solid @color;
+}
+
+//最外层DIV样式
+.mapbox {
+    #border();
+    border-right: 1px solid @color;
+    width: 1000px;
+    height: 481px;
+    overflow: hidden
+}
+
+//设置整体宽度
+.mapbox .mapbox-1200 {
+    width: 1050px
+}
+
+//内层DIV 样式
+.card-transform {
+    width: 167px;
+    height: 120px;
+    border: 1px solid @color;
+    border-right: 0;
+    border-bottom: 0;
+    float: left;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    .back,
+    .front {
+        #border();
+        width: 167px;
+        height: 120px;
+        backface-visibility: hidden;
+        transition: .6s;
+        position: absolute;
+        left: 0;
+        top: 0
+    }
+    .front {
+        #border();
+        padding: 15px 0;
+        z-index: 2;
+        transform: rotateY(0deg);
+        background-color: #fff;
+        img {
+            margin-bottom: 5px;
+            height: 40px;
+            width: 40px
+        }
+        h2 {
+            margin-bottom: 5px;
+            font-size: 15px;
+            color: #333
+        }
+        span {
+            font-size: 14px;
+            color: #35b558
+        }
+    }
+    .back {
+        padding-top: 30px;
+        transform: rotateY(-180deg);
+        background-color: #f5f5f5;
+        strong {
+            display: block;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 10px;
+            font-weight: 400
+        }
+        span {
+            display: block;
+            font-size: 14px;
+            color: gray;
+            margin-bottom: 20px
+        }
+        .greenbtn {
+            font-size: 16px;
+            color: #fff;
+            text-align: center;
+            border-radius: inherit;
+            width: 140px;
+            height: 36px;
+            cursor: pointer
+        }
+    }
+    &:hover {
+        .front {
+            transform: rotateY(180deg)
+        }
+        .back {
+            transform: rotateY(0deg)
+        }
+    }
+    .front .card-transform .front .card-transform .front .card-transform .back {
+        padding-top: 30px;
+        transform: rotateY(-180deg);
+        background-color: #f5f5f5
+    }
+}
+
+.card-transform .more-lesson-list {
+    border: 1px solid @color;
+    border-top: 0;
+    padding: 20px;
+    a {
+        color: #666;
+        font-size: 12px;
+        display: inline-block;
+        float: left;
+        line-height: 24px;
+        text-align: center;
+        padding: 0 10px
+    }
+}
+
+.all-lesson {
+    border: 1px solid @color;
+    border-top: 0;
+    height: 40px;
+    line-height: 40px;
+    background: #f5f5f5;
+    text-align: center;
+    a {
+        font-size: 14px;
+        color: gray;
+        position: relative;
+        .all-lesson-infor {
+            background: #fff;
+            font-size: 12px;
+            color: #666;
+            padding: 4px 5px;
+            position: absolute;
+            left: 10px;
+            top: 0;
+            display: inline-block;
+            width: 280px;
+            line-height: 12px
+        }
+    }
+    .all-lesson a .all-lesson a .all-lesson-infor i {
+        width: 0;
+        height: 0;
+        border-top: 5px solid transparent;
+        border-right: 8px solid #fff;
+        border-bottom: 5px solid transparent;
+        position: absolute;
+        left: -8px;
+        top: 5px
+    }
+}

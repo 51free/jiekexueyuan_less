@@ -1,0 +1,285 @@
+
+    /*<!-- 精品系列课程 -->*/
+.lesson-card {
+    position: relative;
+    width: 235px;
+    height: 261px;
+    padding: 16px;
+    border: 1px solid #e4e4e4;
+    font-size: 12px;
+    -webkit-transition: border-color .3s;
+    -ms-transition: border-color .3s;
+    -moz-transition: border-color .3s;
+    transition: border-color .3s;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+    margin-left: 20px
+}
+
+.lesson-card a {
+    color: #666
+}
+
+.lesson-card:nth-child(1) {
+    margin-left: 0
+}
+
+.lesson-card:nth-child(4n+1) {
+    margin-left: 0
+}
+
+.lesson-card * {
+    -webkit-box-sizing: inherit;
+    -moz-box-sizing: inherit;
+    -ms-box-sizing: inherit;
+    box-sizing: inherit
+}
+
+.lesson-card .btn {
+    height: 26px;
+    padding: 0 15px;
+    font-size: 12px;
+    -ms-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-transition: background-color .8s, border-color .8s;
+    -moz-transition: background-color .8s, border-color .8s;
+    -ms-transition: background-color .8s, border-color .8s;
+    transition: background-color .8s, border-color .8s;
+    background: #eaeaea;
+    border-color: #eaeaea;
+    color: #666;
+    display: inline-block;
+    line-height: 24px;
+    text-align: center;
+    white-space: nowrap;
+    text-decoration: none;
+    cursor: pointer;
+    vertical-align: middle
+}
+
+.lesson-card .btn-def {
+    background: #35b558;
+    border-color: #35b558;
+    color: #fff
+}
+
+.lesson-card .btn-warn {
+    background: #ff5c00;
+    border-color: #ff5c00;
+    color: #fff
+}
+
+.lesson-card:hover {
+    border-color: #35b558
+}
+
+.lesson-card:hover .describe {
+    visibility: visible;
+    opacity: 1
+}
+
+.lesson-card h2 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 80%;
+    margin-bottom: 15px;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1
+}
+
+.lesson-card .other {
+    position: relative;
+    z-index: 20;
+    color: gray;
+    line-height: 18px
+}
+
+.lesson-card .other span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    margin-right: 6px
+}
+
+.lesson-card .sccolor {
+    background: #ff5c00;
+    color: #fff
+}
+
+.lesson-card .other .lesson-count {
+    max-width: 40px
+}
+
+.lesson-card .other .learn-count {
+    max-width: 90px
+}
+
+.lesson-card .collect {
+    float: right
+}
+
+/*中心部位图片的大小*/
+.lesson-card .images {
+    overflow: hidden;
+    margin-bottom: 15px;
+
+    height:70%;
+}
+
+.lesson-card .images .inner {
+    margin: 0 -5px -8px;
+    height: 210px;
+    overflow: hidden
+}
+
+.lesson-card .images .inner:after {
+    display: table;
+    clear: both;
+    content: " "
+}
+
+.lesson-card .images li {
+    float: left;
+    width: 62px;
+    height: 34px;
+    margin: 0 4px 8px
+}
+
+.lesson-card .images img {
+    display: block;
+    width: 100%;
+    height: 100%
+}
+
+/*覆盖后的样式*/
+.lesson-card .describe {
+    position: absolute;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    background: rgba(255, 255, 255, .9);
+    opacity: 0;
+    top: 0;
+    height: 100%;
+    text-align: center;
+    visibility: hidden;
+    -webkit-transition: .3s;
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    transition: .3s
+}
+
+.lesson-card .describe .picture {
+    overflow: hidden;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    margin-left: -25px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%
+}
+
+.lesson-card .describe .picture img {
+    width: 100%;
+    height: 100%
+}
+
+.lesson-card .describe .name {
+    position: absolute;
+    top: 74px;
+    left: 0;
+    width: 100%
+}
+
+.lesson-card .describe .name:hover {
+    color: #35b558
+}
+
+.lesson-card .describe .text {
+    overflow: hidden;
+    position: absolute;
+    top: 100px;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    padding: 0 16px;
+    text-align: left;
+    line-height: 20px;
+    word-wrap: break-word;
+    word-break: break-all
+}
+
+.lesson-card .describe .text:hover {
+    color: #35b558
+}
+
+.lesson-card .describe .btn {
+    position: absolute;
+    top: 164px;
+    left: 50%;
+    width: 100px;
+    height: 28px;
+    margin-left: -50px;
+    font-size: 14px;
+    line-height: 26px;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    -ms-border-radius: 2px;
+    border-radius: 2px
+}
+
+.collect {
+    overflow: hidden;
+    width: 56px;
+    height: 20px
+}
+
+.collect .btn {
+    display: block;
+    width: 100%;
+    height: 20px;
+    padding: 0;
+    line-height: 18px
+}
+
+.collect:hover {
+    overflow: visible
+}
+
+.lesson-card .greenbtn {
+    display: inline-block;
+    color: #fff;
+    border-radius: 3px;
+    font-size: 12px;
+    background: #35b558;
+    -ms-transition-duration: .8s;
+    -moz-transition-duration: .8s;
+    -webkit-transition-duration: .8s;
+    transition-duration: .8s;
+    -ms-transition-property: background;
+    -moz-transition-property: background;
+    -webkit-transition-property: background;
+    transition-property: background;
+    -ms-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0)
+}
+
+.lesson-card .greenbtn:active,
+.lesson-card .greenbtn:focus,
+.lesson-card .greenbtn:hover {
+    background: #66d178;
+    color: #fff
+}

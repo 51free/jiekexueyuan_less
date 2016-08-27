@@ -1,0 +1,220 @@
+//wiki  LESS
+@images: "../img";
+@color: #35b558;
+@colore: #e4e4e4;
+@color9: #999;
+@width: 333.3px;
+@w1: 1px;
+@w5: 5px;
+@w10: 10px;
+@w13: 13px;
+
+//边框样式
+#border1 {
+        border: @w1 solid @color;
+}
+//box样式
+.wikibox {
+    .one-wiki:nth-child(2),
+    .one-wiki:nth-child(3) {
+        border-left: 0;
+        &:hover {
+            #border1();
+        }
+    }
+}
+
+.wikibox .one-wiki {
+    width: @width;
+    height: @w10*37;
+    float: left;
+    padding: @w1*15;
+    border: @w1 solid @colore;
+    &:hover {
+            #border1();
+    }
+    h2 {
+        font-size: @w10*1.4;
+        font-weight: 500
+    }
+    dl dd {
+        text-align: center;
+        width: @w1*142;
+        float: left;
+        //a标签样式
+        a {
+            &:hover h3,
+            sapn {
+                color: @color;
+            }
+        }
+        h3 {
+            font-size: @w13;
+            color: #333;
+            height: @w13;
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: @w13;
+            margin: @w10 auto;
+        }
+        span {
+            font-size: @w1*12;
+            color: @color9;
+            display: block
+        }
+    }
+    //图片box样式
+    dl dd .imgbox {
+        position: relative;
+        width: @w1*142;
+        height: @w10*20;
+        background: @color9;
+        border-radius: @w5;
+        
+        &:hover {
+            .look {
+                display: block
+            }
+            img.fengmian {
+                animation: ffk-animate 1s ease forwards;
+                transform-origin: 0 0 0
+            }
+        }
+        img.fengmian {
+            width: @w1*142;
+            height: @w10*20;
+            border-radius: @w5;
+           
+            transform-origin: 0 0 0;
+            
+            animation: ffk-animate2 1s ease forwards
+        }
+        .look {
+            position: absolute;
+            width: @w10*4;
+            z-index: 10;
+            right: @w10*-1;
+            top: -13*@w1;
+            background: url("@{images}/look_d293d44.png") center center no-repeat;
+            background-size: 100% 100%;
+            height: @w10*2;
+            display: none
+        }
+    }
+    dl dd:nth-child(1) {
+        margin-right: @w5*3
+    }
+}
+
+.wikibox .one-wiki {
+    ul {
+        margin-top: @w10;
+        li {
+            font-size: @w1*12;
+            color: @color9;
+            line-height: @w1*12;
+            margin-bottom: @w1*8;
+            display: block;
+            a {
+                color: @color9;
+                &:hover {
+                    color: @color;
+                }
+            }
+            p {
+                width: @w10*20;
+                display: block;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                float: left
+            }
+            span {
+                text-align: right;
+                display: block;
+                float: right;
+                width: @w10*9;
+            }
+        }
+    }
+}
+
+.open {
+    
+    animation: ffk-animate 1s ease forwards;
+    transform-origin: 0 0 0
+}
+
+@-webkit-keyframes ffk-animate {
+    0% {
+        -webkit-transform: rotateY(0deg)
+    }
+    100% {
+        -webkit-transform: rotateY(-20deg)
+    }
+}
+
+@-moz-keyframes ffk-animate {
+    0% {
+        -webkit-transform: rotateY(0deg)
+    }
+    100% {
+        -webkit-transform: rotateY(-20deg)
+    }
+}
+
+@-ms-keyframes ffk-animate {
+    0% {
+        -webkit-transform: rotateY(0deg)
+    }
+    100% {
+        -webkit-transform: rotateY(-20deg)
+    }
+}
+
+@keyframes ffk-animate {
+    0% {
+        -webkit-transform: rotateY(0deg)
+    }
+    100% {
+        -webkit-transform: rotateY(-20deg)
+    }
+}
+
+@-webkit-keyframes ffk-animate2 {
+    0% {
+        -webkit-transform: rotateY(-20deg)
+    }
+    100% {
+        -webkit-transform: rotateY(0deg)
+    }
+}
+
+@-moz-keyframes ffk-animate2 {
+    0% {
+        -webkit-transform: rotateY(-20deg)
+    }
+    100% {
+        -webkit-transform: rotateY(0deg)
+    }
+}
+
+@-ms-keyframes ffk-animate2 {
+    0% {
+        -webkit-transform: rotateY(-20deg)
+    }
+    100% {
+        -webkit-transform: rotateY(0deg)
+    }
+}
+
+@keyframes ffk-animate2 {
+    0% {
+        -webkit-transform: rotateY(-20deg)
+    }
+    100% {
+        -webkit-transform: rotateY(0deg)
+    }
+}
